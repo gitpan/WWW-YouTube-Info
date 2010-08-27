@@ -14,7 +14,7 @@ our @EXPORT = qw(
   get_info
 );
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 use Carp;
 use Data::Dumper;
@@ -66,14 +66,20 @@ I guess its pretty much self-explanatory ..
 =cut
 
 sub new {
-  my ($class, $val) = @_;
+  my ($class, $id) = @_;
 
   my $self = {};
-  $self->{_id} = $val || croak "no VIDEO_ID given!";
+  $self->{_id} = $id || croak "no VIDEO_ID given!";
   bless($self, $class);
 
   return $self;
 }
+
+=head2 get_info
+
+See synopsis for how/what/why. You might also want to use L<Data::Dumper> ..
+
+=cut
 
 sub get_info {
   my ($self) = @_;
@@ -99,7 +105,7 @@ sub get_info {
 
 __END__
 
-=head2 EXPORT
+=head1 EXPORT
 
 Exported by default:
 get_info
@@ -112,7 +118,7 @@ Searching the internet regarding 'fmt_url_map' and/or 'get_video_info' might gai
 
 Please report bugs and/or feature requests to
 C<bug-WWW-YouTube-Info at rt.cpan.org>,
-alternatively my means of the web interface at
+alternatively by means of the web interface at
 L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=WWW-YouTube-Info>.
 
 =head1 AUTHOR
