@@ -5,4 +5,6 @@ Revision history for Perl extension WWW::YouTube::Info.
 		-AX WWW::YouTube::Info
 0.02  Fri Aug 27 13:03:38 2010
 	- spelling and formating of POD
+0.03  Fri Aug 27 15:45:37 2010
+	- fixed potential collision at export
 

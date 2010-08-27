@@ -11,10 +11,9 @@ our @ISA = qw(
 );
 
 our @EXPORT = qw(
-  get_info
 );
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 use Carp;
 use Data::Dumper;
@@ -61,7 +60,7 @@ WWW::YouTube::Info - gain info on YouTube video by VIDEO_ID
 
 I guess its pretty much self-explanatory ..
 
-=head1 FUNCTIONS
+=head1 METHODS
 
 =cut
 
@@ -104,11 +103,6 @@ sub get_info {
 1;
 
 __END__
-
-=head1 EXPORT
-
-Exported by default:
-get_info
 
 =head1 HINTS
 
