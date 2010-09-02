@@ -13,7 +13,7 @@ our @ISA = qw(
 our @EXPORT = qw(
 );
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 use Carp;
 use Data::Dumper;
@@ -39,22 +39,22 @@ WWW::YouTube::Info - gain info on YouTube video by VIDEO_ID
   
   my $yt = WWW::YouTube::Info->new($id);
   
-  $yt->get_info();
+  my $info = $yt->get_info();
   
   # hash reference holds values gained via http://youtube.com/get_video_info?video_id=foobar
-  # $yt->{title}          # e.g.: Foo+bar+-+Foobar
-  # $yt->{author}         # e.g.: foobar
-  # $yt->{keywords}       # e.g.: Foo%2Cbar%2CFoobar
-  # $yt->{length_seconds} # e.g.: 60
-  # $yt->{fmt_map}        # e.g.: 22%2F1280x720%2F9%2F0%2F115%2C35%2F854x480%2F9%2F0%2F115%2C34%2F640x360%2F9%2F0%2F115%2C5%2F320x240%2F7%2F0%2F0
-  # $yt->{fmt_url_map}    # e.g.: 22%7Chttp%3A%2F%2Fv14.lscache1.c.youtube.com%2Fvideoplayback%3Fip%3D131.0.0.0 ..
-  # $yt->{fmt_stream_map} # e.g.: 22%7Chttp%3A%2F%2Fv14.lscache1.c.youtube.com%2Fvideoplayback%3Fip%3D131.0.0.0 ..
+  # $info->{title}          # e.g.: Foo+bar+-+%27Foobar%27
+  # $info->{author}         # e.g.: foobar
+  # $info->{keywords}       # e.g.: Foo%2Cbar%2CFoobar
+  # $info->{length_seconds} # e.g.: 60
+  # $info->{fmt_map}        # e.g.: 22%2F1280x720%2F9%2F0%2F115%2C35%2F854x480%2F9%2F0%2F115%2C34%2F640x360%2F9%2 ..
+  # $info->{fmt_url_map}    # e.g.: 22%7Chttp%3A%2F%2Fv14.lscache1.c.youtube.com%2Fvideoplayback%3Fip%3D131.0.0.0 ..
+  # $info->{fmt_stream_map} # e.g.: 22%7Chttp%3A%2F%2Fv14.lscache1.c.youtube.com%2Fvideoplayback%3Fip%3D131.0.0.0 ..
   # ..
   
   # Remark:
-  # You might want to check $yt->{status} before further workout,
+  # You might want to check $info->{status} before further workout,
   # as some videos have copyright issues indicated, for instance, by
-  # $yt->{status} ne 'ok'.
+  # $info->{status} ne 'ok'.
 
 =head1 DESCRIPTION
 
@@ -117,7 +117,7 @@ L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=WWW-YouTube-Info>.
 
 =head1 AUTHOR
 
-east
+east E<lt>east@cpan.orgE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
