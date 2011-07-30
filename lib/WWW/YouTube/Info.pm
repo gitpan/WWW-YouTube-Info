@@ -13,7 +13,7 @@ our @ISA = qw(
 our @EXPORT = qw(
 );
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 use Carp;
 use Data::Dumper;
@@ -77,6 +77,7 @@ sub new {
 =head2 get_info
 
 See synopsis for how/what/why. You might also want to use L<Data::Dumper> ..
+Croaks if C<LWP::Simple::get> fails.
 
 =cut
 
@@ -106,7 +107,8 @@ __END__
 
 =head1 HINTS
 
-Searching the internet regarding 'fmt_url_map' and/or 'get_video_info' might gain hints/information to improve L<WWW::YouTube::Info>.
+Searching the internet regarding 'fmt_url_map' and/or 'get_video_info'
+might gain hints/information to improve L<WWW::YouTube::Info>.
 
 =head1 BUGS
 
@@ -121,7 +123,7 @@ east E<lt>east@cpan.orgE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2010 by east
+Copyright (C) 2011 by east
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself, either Perl version 5.8.0 or,

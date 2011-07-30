@@ -9,4 +9,6 @@ Revision history for Perl extension WWW::YouTube::Info.
 	- fixed potential collision at export
 0.04  Wed Sep  1 10:52:24 2010
 	- fixed synopsis
+0.05  Wed Jul 27 15:32:42 2011
+	- added tests
 
